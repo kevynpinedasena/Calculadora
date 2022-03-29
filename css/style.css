@@ -1,0 +1,140 @@
+* {
+    font-family: 'Fraunces', serif;
+    color: white;
+
+}
+
+body{
+    margin: 0;
+    background-color: #23282aed;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.calculadora{
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #7c5ccb;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+button{
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 0.8cm;
+    border: none;
+    color: black;
+    background-color: #94a3a0;
+    box-shadow: 2px 2px 10px -2px #ffffff40, -2px -2px 10px 2px #ffffff1f;
+}
+
+button:active{
+    background-color: #ffffff;
+}
+
+button:focus{
+    outline: none;
+}
+
+.col-2{
+    grid-column: span 2;
+    background-color: #ff3a3a;
+}
+
+.col-2:hover{
+    grid-column: span 2;
+    background-color: #ce5353;
+}
+
+.col-3{
+    grid-column: span 2;
+}
+
+.display{
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #ffffff;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #fffafa33;
+}
+
+#valor_actual{
+    font-size: 1.5em;
+    color: black;
+}
+
+#valor_anterior{
+    font-size: 2em;
+    color: black;
+}
+
+/* estilo del boton oscuro y claro */
+
+.oscu{
+    display: flex;
+    justify-content: end;
+    padding: 20px 20px;
+    width: 10%;
+}
+
+.lbl{
+    display: inline-block;
+    width: 65px;
+    height: 33px;
+    background: #f8f5f5;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+
+.lbl::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(46, 41, 45);
+    border-radius: 100px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: 0.5s;
+}
+
+#switch:checked + .lbl::after{
+    left: 36px;
+}
+
+
+#switch:checked + .lbl{
+    background: rgba(39, 40, 43, 0.87);
+}
+
+#switch{
+    display: none;
+}
+
+.color{
+    background-color: rgb(240, 222, 222);
+}
+
+.oscu{
+    margin-bottom: 20px;
+}
